@@ -9,7 +9,7 @@
     "start": "npm run version && node main.js",
     "start:dev": "nodemon main.js",
     "lint": "eslint .",
-    "version": "check-node-version --node '>=6.0.0'"
+    "version": "check-node-version --node \">=6.0.0\""
   },
   "author": "support@form.io",
   "engines": {

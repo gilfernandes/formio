@@ -14,6 +14,10 @@ module.exports = function(router) {
           return next(err);
         }
 
+        // Changed by Gil
+        const bkEms = require("../plugins/bk_ems");
+        bkEms.forms.propagateForms(handler, req, res);
+
         // Only add the action for new forms.
         if (
           (handler === 'after') &&

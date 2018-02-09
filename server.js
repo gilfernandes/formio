@@ -39,6 +39,11 @@ module.exports = function(options) {
   // Use the express application.
   const app = options.app || express();
 
+  // Changed by Gil Fernandes
+  // Used to capture the jsession id and use it later.
+  const bkEms = require('./src/plugins/bk_ems');
+  bkEms.api.jsession(app);
+
   // Use the given config.
   const config = options.config || require('config');
 
